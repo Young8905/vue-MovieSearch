@@ -1,10 +1,10 @@
 const axios = require('axios')
+const { OMDB_API_KEY } = process.env
 
 exports.handler = async function (event) {
   console.log(event)
   const payload = JSON.parse(event.body)
   const {title, type, year, page, id } = payload
-  const OMDB_API_KEY = '7035c60c'
   // 아이디값이 있으면 ? 의 주소로 들어가서 자료를 가져오고 없을경우 밑에 주소로 접속하여 자료를 가져옴 
   const url = id 
   ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}` 
