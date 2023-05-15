@@ -122,6 +122,7 @@ export default {
       }
     }
   }
+  
 
   async function _fetchMovie(payload) {
 
